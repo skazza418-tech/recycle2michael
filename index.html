@@ -43,24 +43,29 @@
 .hero-images {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* gives the wide spacing back */
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
 }
 
 .hero-van {
-    width: 100%;
-    max-width: 900px;
-    display: block;
+    width: 85%;          /* makes the cropped van behave like the old wide one */
+    max-width: 900px;    /* restores the original visual weight */
+    margin-left: -40px;  /* shifts it left like before */
+    z-index: 1;
 }
 
 .hero-sticker {
     position: absolute;
-    bottom: 5%;
-    right: 15%;
-    width: 35%;
-    max-width: 350px;
-    z-index: 10;
+    width: 32%;          /* same visual size as before */
+    right: -40px;        /* pushes it out to the right like the old layout */
+    bottom: -20px;       /* lowers it to match the old overlap */
+    z-index: 2;
 }
+
 @media (max-width: 900px) {
     .hero-images {
         max-width: 100%;
@@ -286,7 +291,7 @@ h1, h2 {
 
     <h2>About</h2>
     <div class="text-block">
-        Fast, friendly recycling pickups and small removals across Cardiff.
+        Fast, friendly recycling pickups and removals across Cardiff.
     </div>
 
     <div class="gallery">
