@@ -193,43 +193,48 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     z-index: 9999;
 }
-/* FIX ITEMS WE SELL LAYOUT */
-.items-for-sale {
+/* ITEMS GRID WITH IMAGES */
+.items-grid {
     margin-top: 40px;
-    padding: 20px;
-    background: #f9f9f9;
+    text-align: center;
+}
+
+.items-grid h2 {
+    margin-bottom: 25px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: #fff;
+    padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.items-for-sale h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.item-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.item {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.1rem;
+.item-card h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
 }
 
-.item:last-child {
-    border-bottom: none;
-}
-
-.item-name {
-    font-weight: 600;
-}
-
-.item-price {
+.item-card .price {
+    font-size: 1.2rem;
     font-weight: 700;
     color: #2b7cff;
 }
+
 </style>
 
 <script>
@@ -272,49 +277,40 @@ function closeLightbox() {
         <div>Appliance Removal</div>
     </div>
 </section>
-<!-- ITEMS WE SELL WITH IMAGES -->
+<!-- ITEMS WE SELL (GRID WITH IMAGES + PRICES) -->
 <section class="items-grid">
     <h2>Items We Sell</h2>
 
     <div class="item-card">
         <img src="washingmachine.jpg" alt="Washing Machine">
-        <div class="item-info">
-            <span class="item-title">Washing Machines</span>
-            <span class="item-price">£25</span>
-        </div>
+        <h3>Washing Machines</h3>
+        <p class="price">£25</p>
     </div>
 
     <div class="item-card">
         <img src="fridge.jpg" alt="Fridge">
-        <div class="item-info">
-            <span class="item-title">Fridges</span>
-            <span class="item-price">£30</span>
-        </div>
+        <h3>Fridges</h3>
+        <p class="price">£30</p>
     </div>
 
     <div class="item-card">
         <img src="dryer.jpg" alt="Tumble Dryer">
-        <div class="item-info">
-            <span class="item-title">Tumble Dryers</span>
-            <span class="item-price">£20</span>
-        </div>
+        <h3>Tumble Dryers</h3>
+        <p class="price">£20</p>
     </div>
 
     <div class="item-card">
         <img src="microwave.jpg" alt="Microwave">
-        <div class="item-info">
-            <span class="item-title">Microwaves</span>
-            <span class="item-price">£10</span>
-        </div>
+        <h3>Microwaves</h3>
+        <p class="price">£10</p>
     </div>
 
     <div class="item-card">
         <img src="scrap.jpg" alt="Scrap Metal">
-        <div class="item-info">
-            <span class="item-title">Scrap Metal (per load)</span>
-            <span class="item-price">£15</span>
-        </div>
+        <h3>Scrap Metal (per load)</h3>
+        <p class="price">£15</p>
     </div>
+</section>
 
 </section>
 
