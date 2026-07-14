@@ -204,6 +204,29 @@
     font-weight: bold;
     margin-bottom: 6px;
 }
+/* DOGS TRUST CAROUSEL */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    border-radius: 20px;
+}
 
 /* STICKY CALL BUTTON */
 .sticky-call {
@@ -364,14 +387,18 @@ function closeLightbox() {
     </a>
 </section>
     <!-- DOGS TRUST GALLERY -->
-<section class="gallery">
-    <h2>Dogs Trust Support</h2>
-    <div class="gallery-grid">
-        <img src="dt-15107.jpg" onclick="openLightbox(this.src)">
-        <img src="dt-15108a.jpg" onclick="openLightbox(this.src)">
-        <img src="dt-15112.jpg" onclick="openLightbox(this.src)">
-        <img src="dt-15116.jpg" onclick="openLightbox(this.src)">
+<section class="trust">
+    <h2>Trusted by Dogs Trust</h2>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <img src="dogs1.jpg" alt="Dogs Trust Image 1">
+            <img src="dogs2.jpg" alt="Dogs Trust Image 2">
+            <img src="dogs3.jpg" alt="Dogs Trust Image 3">
+        </div>
     </div>
+
+    <p>Supporting Dogs Trust with every collection.</p>
 </section>
 
 <div id="lightbox" onclick="closeLightbox()">
